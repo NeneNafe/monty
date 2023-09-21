@@ -32,3 +32,22 @@ void swap(stack_t **stack, unsigned int line_number)
 	temp->prev = NULL;
 	*stack = temp;
 }
+
+/**
+ * add_nodes -  adds the top two elements of the stack
+ * @stack: pointer to line
+ * @line_number: number lines
+ */
+void add_nodes(stack_t **stack, unsigned int line_number)
+{
+	int sum;
+
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+		more_err(8, line_number, "add");
+
+	(*stack) = (*stack)->next;
+	sum = (*stack)->n + (*stack)->prev->n;
+	(*stack)->n = sum;
+	free((*stack)->prev);
+	(*stack)->prev = NULL;
+}

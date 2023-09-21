@@ -96,6 +96,7 @@ void f_func(char *opcode, char *val, int line, int format)
 		{"pint", print_top_stack},
 		{"pop", pop_top_stack},
 		{"nop", nop},
+		{"add", add_nodes},
 		{"swap", swap},
 		{NULL, NULL}
 	};

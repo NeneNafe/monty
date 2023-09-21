@@ -68,5 +68,6 @@ void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int line);
 void pop_top_stack(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
+void add_nodes(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTHY_H */
